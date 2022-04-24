@@ -1,0 +1,118 @@
+// font
+@mixin ff-g {
+    font-family: "mGothic";
+}
+
+@mixin ff-naba {
+    font-family: "NanumBarunGothic", serif;
+}
+/* 나눔바른고딕 */
+@font-face {
+    font-family: "NanumBarunGothic";
+    font-style: normal;
+    font-weight: 400;
+    src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot");
+    src: url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix") format("embedded-opentype"),
+        url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff") format("woff"),
+        url("//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "NanumBarunGothic";
+    src: url(../fonts/NanumBarunGothicLight.woff);
+    font-weight: 300;
+}
+// @font-face {
+//     font-family: "NanumBarunGothic";
+//     src: url(../fonts/NanumBarunGothic.woff);
+//     font-weight: 400;
+// }
+@font-face {
+    font-family: "NanumBarunGothic";
+    src: url(../fonts/NanumBarunGothicBold.woff);
+    font-weight: 700;
+}
+
+//Cafe24Ohsquare
+@mixin ff-cafeoh {
+    font-family: "Cafe24Ohsquare";
+}
+@font-face {
+    font-family: "Cafe24Ohsquare";
+    src: url(../fonts/Cafe24Ohsquare.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+//S-CoreDream
+@mixin ff-score {
+    font-family: "S-CoreDream6";
+}
+@font-face {
+    font-family: "S-CoreDream3";
+    src: url(../fonts/SCDream3.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "S-CoreDream4";
+    src: url(../fonts/SCDream4.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "S-CoreDream5";
+    src: url(../fonts/SCDream5.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "S-CoreDream6";
+    src: url(../fonts/SCDream6.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "S-CoreDream7";
+    src: url(../fonts/SCDream7.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+// oneMobileTitle
+@mixin ff-onemobile {
+    font-family: "oneMobileTitle";
+}
+@font-face {
+    font-family: "oneMobileTitle";
+    src: url(../fonts/ONE-Mobile-Title.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+// poppins
+@mixin ff-poppin {
+    font-family: "Poppins", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+
+@font-face {
+    font-family: "NanumSquare";
+    src: url(../fonts/NanumSquareL.woff);
+    font-weight: 300;
+}
+@font-face {
+    font-family: "NanumSquare";
+    src: url(../fonts/NanumSquareR.woff);
+    font-weight: 400;
+}
+@font-face {
+    font-family: "NanumSquare";
+    src: url(../fonts/NanumSquareB.woff);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "NanumSquare";
+    src: url(../fonts/NanumSquareEB.woff);
+    font-weight: 800;
+}
