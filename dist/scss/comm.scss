@@ -4,7 +4,7 @@
 // layout
 .container {
     //min-width: 1200px; // width : 최소 1200px
-    max-width: 1238px; // width : 최대 1476px
+    width: 1238px; // width : 최대 1476px
     margin: 0 auto;
 }
 
@@ -49,11 +49,11 @@
 
 // header
 #header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10000;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // z-index: 1000;
     background-color: $w;
     .hd-group {
         border-bottom: 1px solid $bgGray1;
@@ -195,14 +195,13 @@
         display: flex;
         // justify-content: space-between;
         width: auto;
-        padding: 23px 100vw;
+        padding: 23px 0;
         opacity: 0;
         visibility: hidden;
         box-sizing: border-box;
         text-align: left;
         white-space: nowrap;
         z-index: 122;
-        transform: translateX(-50%);
         transition: all 0.1s ease-out;
         > li {
             display: inline-block;

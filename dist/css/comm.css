@@ -384,7 +384,7 @@ legend {
 }
 
 .container {
-  max-width: 1238px;
+  width: 1238px;
   margin: 0 auto;
 }
 
@@ -449,11 +449,6 @@ legend {
 }
 
 #header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10000;
   background-color: #fff;
 }
 
@@ -639,7 +634,7 @@ legend {
   display: -ms-flexbox;
   display: flex;
   width: auto;
-  padding: 23px 100vw;
+  padding: 23px 0;
   opacity: 0;
   visibility: hidden;
   -webkit-box-sizing: border-box;
@@ -647,8 +642,6 @@ legend {
   text-align: left;
   white-space: nowrap;
   z-index: 122;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
