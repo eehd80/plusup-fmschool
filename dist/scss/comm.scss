@@ -178,9 +178,9 @@
                 text-align: center;
                 > span {
                     position: relative;
-                    display: flex;
-                    align-items: center;
+                    display: block;
                     height: 54px;
+                    line-height: 58px;
                     padding: 0 6px;
                 }
             }
@@ -273,7 +273,7 @@
                     width: 13px;
                     height: 13px;
                     margin: -1px 5px 0 0;
-                    background: url(../../images/ico/ico-play.png) 50% 50% no-repeat;
+                    background: url(../../images/ico/ico-play.png) 50% 50% / contain no-repeat;
                     vertical-align: middle;
                 }
             }
