@@ -2,12 +2,14 @@
 @import "reset", "fonts", "variables", "mixin";
 
 // layout
+.wrap {
+    min-width: 1238px;
+}
 .container {
     //min-width: 1200px; // width : 최소 1200px
     width: 1238px; // width : 최대 1476px
     margin: 0 auto;
 }
-
 // common
 .sec-tit {
     margin-bottom: 100px;

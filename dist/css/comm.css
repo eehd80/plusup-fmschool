@@ -193,13 +193,6 @@ input[type="password"] {
   vertical-align: middle;
 }
 
-.img-g2 {
-  display: inline-block;
-  overflow: hidden;
-  background: url(../../images/comm/sprite.svg) no-repeat;
-  vertical-align: middle;
-}
-
 /* 이미지 */
 /* global */
 .ir_pm {
@@ -381,6 +374,10 @@ legend {
   font-family: "NanumSquare";
   src: url(../fonts/NanumSquareEB.woff);
   font-weight: 800;
+}
+
+.wrap {
+  min-width: 1238px;
 }
 
 .container {
