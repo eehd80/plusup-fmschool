@@ -809,12 +809,18 @@ legend {
         width: 100%;
     }
     #gnb .gnb-1dep {
-        width: calc(100% - 12px);
+        width: calc(100% - 20px);
         margin: 0 auto;
     }
     #gnb .gnb-1dep > li > a {
         padding: 0;
         font-size: 16px;
+    }
+    #gnb .gnb-1dep > li:last-child .gnb-2dep {
+        left: auto;
+        right: 0;
+        width: auto;
+        text-align: right;
     }
     #gnb .gnb-2dep {
         flex-direction: column;
