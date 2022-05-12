@@ -24,7 +24,6 @@
         <link rel="stylesheet" href="./dist/css/comm.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script src="./dist/vendor/scrollUp/jquery.scrollUp.min.js"></script>
         <script src="./dist/js/comm.js"></script>
         <!--[if lt IE 9]>
             <script src="./dist/vendor/html5.js"></script>
@@ -46,7 +45,7 @@
                 <nav id="gnb">
                     <ul class="lst-gnb">
                         <li>
-                            <a href="#">
+                            <a href="#sec1">
                                 <span class="img">
                                     <img src="./images/ico-nav1@2x.png" alt="" />
                                 </span>
@@ -54,17 +53,17 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#sec2">
                                 <span class="img"> <img src="./images/ico-nav2@2x.png" alt="" /> </span>주식시장은 1%가 되면 안된다고?
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#sec3">
                                 <span class="img"> <img src="./images/ico-nav3@2x.png" alt="" /> </span>언제까지 어깨춤을 추게할거야?
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#sec4">
                                 <span class="img"> <img src="./images/ico-nav4@2x.png" alt="" /> </span>파이어족의 MBTI는?
                             </a>
                         </li>
@@ -79,7 +78,7 @@
                     <a href="#" class="link-more">더보기</a>
                 </h2>
                 <!-- 1row -->
-                <section class="sec-knowhow">
+                <section id="sec1" class="sec-knowhow">
                     <h3 class="tit-sec">
                         <span class="img"> <img src="./images/ico-nav1@2x.png" alt="" /> </span> 요즘 MZ세대의 투자 공부법은?
                     </h3>
@@ -130,7 +129,7 @@
                     </ul>
                 </section>
                 <!-- 2row -->
-                <section class="sec-knowhow">
+                <section id="sec2" class="sec-knowhow">
                     <h3 class="tit-sec">
                         <span class="img"> <img src="./images/ico-nav2@2x.png" alt="" /> </span> 주식시장은 1%가 되면 안된다고?
                     </h3>
@@ -181,7 +180,7 @@
                     </ul>
                 </section>
                 <!-- 3row -->
-                <section class="sec-knowhow">
+                <section id="sec3" class="sec-knowhow">
                     <h3 class="tit-sec">
                         <span class="img"> <img src="./images/ico-nav3@2x.png" alt="" /> </span> 언제까지 어깨춤을 추게할거야?
                     </h3>
@@ -232,7 +231,7 @@
                     </ul>
                 </section>
                 <!-- 4row -->
-                <section class="sec-knowhow sec3">
+                <section id="sec4" class="sec-knowhow sec3">
                     <h3 class="tit-sec">
                         <span class="img"> <img src="./images/ico-nav4@2x.png" alt="" /> </span> 파이어족의 MBTI는?
                     </h3>
@@ -319,6 +318,9 @@
                     <a href="#" class="btn-comm">더 알아보기</a>
                 </section>
             </main>
+            <footer>
+                <a href="#header" id="scrollTop">Top</a>
+            </footer>
         </div>
         <div class="wrap-modal">
             <div class="modal">
@@ -334,5 +336,27 @@
                 </div>
             </div>
         </div>
+
+        <script>
+            $(document).ready(function () {
+                $("#gnb a, #scrollTop").on("click", function (event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+                        $("html, body").animate(
+                            {
+                                scrollTop: $(hash).offset().top,
+                            },
+                            900,
+                            function () {
+                                window.location.hash = hash;
+                            },
+                        );
+                    } // End if
+                });
+            });
+        </script>
     </body>
 </html>
