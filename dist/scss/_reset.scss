@@ -135,7 +135,7 @@ select,
 textarea,
 button {
     font-size: 14px;
-    font-family: "NanumBarunGothic", "NanumSquare", "Malgun Gothic", "맑은 고딕", sans-serif;
+    font-family: "NanumSquareRound", "Malgun Gothic", "맑은 고딕", sans-serif;
     font-weight: 400;
     line-height: 1.5;
     color: #000;
@@ -300,3 +300,10 @@ legend {
         content: "";
     }
 }
+
+// html {
+//     background: url(../../pc.jpg) 50% 0 no-repeat;
+//     body {
+//         opacity: 0.7;
+//     }
+// }
