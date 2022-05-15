@@ -599,6 +599,11 @@ legend {
   padding: 20px 0;
 }
 
+.lst-knowhow img {
+  display: block;
+  width: 100%;
+}
+
 .lst-knowhow .area-info {
   position: absolute;
   top: 14px;
@@ -655,12 +660,29 @@ legend {
 
 .lst-knowhow .thumb {
   width: 87px;
+  height: 76px;
   margin-right: 15px;
 }
 
 .lst-knowhow .thumb img {
   display: block;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.lst-knowhow .thumb2 {
+  width: 100%;
+  height: 350px;
+}
+
+.lst-knowhow .thumb2 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .lst-knowhow .area-txt2 .tit {
