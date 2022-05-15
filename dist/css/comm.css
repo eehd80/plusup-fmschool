@@ -119,7 +119,7 @@ input,
 select,
 textarea,
 button {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "NanumSquareRound", "Malgun Gothic", "맑은 고딕", sans-serif;
   font-weight: 400;
   line-height: 1.5;
@@ -127,7 +127,18 @@ button {
   letter-spacing: -0.05em;
 }
 
-/* color값은 디자인가이드에 맞게사용 */
+@media screen and (max-width: 400px) {
+  body,
+  th,
+  td,
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 14px;
+  }
+}
+
 a {
   color: #333;
   text-decoration: none;
@@ -283,21 +294,56 @@ legend {
 
 @font-face {
   font-family: "NanumSquareRound";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff") format("woff");
-  font-weight: normal;
+  src: url("../fonts/NanumSquareRoundOTFR.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("../fonts/NanumSquareRoundOTFL.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("../fonts/NanumSquareRoundOTFB.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NanumSquareRound";
+  src: url("../fonts/NanumSquareRoundOTFEB.woff") format("woff");
+  font-weight: 800;
   font-style: normal;
 }
 
 .img {
   display: inline-block;
   width: 32px;
-  margin: -3px 10px 0 0;
+  margin: -4px 10px 0 0;
   vertical-align: middle;
 }
 
 .img img {
   display: block;
   width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  .img {
+    margin-right: 5px;
+  }
+}
+
+#sec2 .img img {
+  width: 30px;
+}
+
+#sec3 .img img {
+  width: 28px;
 }
 
 .btn-comm {
@@ -316,6 +362,7 @@ legend {
   background-color: #00a8bb;
   border-radius: 65px;
   font-size: 23px;
+  font-weight: 800;
   color: #fefefe;
 }
 
@@ -326,19 +373,17 @@ legend {
   right: 0;
   z-index: 10;
   width: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #fff;
 }
 
 .area-fixed .btn-comm {
-  width: calc(100% - 50px);
-  margin: 20px 25px;
+  width: 100%;
+  border-radius: 0;
 }
 
 #scrollTop {
   position: fixed;
-  bottom: 130px;
-  right: 20px;
+  bottom: 70px;
+  right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -378,7 +423,7 @@ legend {
 }
 
 #gnb {
-  padding: 17px 25px 26px;
+  padding: 17px 5% 26px;
   background-color: #f2f4f6;
 }
 
@@ -390,28 +435,53 @@ legend {
   margin-bottom: 14px;
 }
 
-.lst-gnb li:first-child .img {
+.lst-gnb li .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 35px;
+}
+
+.lst-gnb li:first-child img {
+  width: 35px;
+}
+
+.lst-gnb li:nth-child(2) img {
+  width: 30px;
+}
+
+.lst-gnb li:nth-child(3) img {
+  width: 28px;
+}
+
+.lst-gnb li:nth-child(4) img {
+  width: 33px;
 }
 
 .lst-gnb a {
   position: relative;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 77px;
-  padding: 0 20px;
+  padding: 0 5%;
   border-radius: 18px;
   -webkit-box-shadow: 4px 6.9px 27.4px 0.6px rgba(0, 0, 0, 0.12);
           box-shadow: 4px 6.9px 27.4px 0.6px rgba(0, 0, 0, 0.12);
   border: solid 1px #ddd;
   background-color: #fff;
-  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 700;
   letter-spacing: -0.8px;
   text-align: left;
   color: #262626;
-  line-height: 77px;
+  line-height: 1.2;
 }
 
 .lst-gnb a::after {
@@ -422,43 +492,44 @@ legend {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: 15px;
+  right: 5%;
   color: #0096ac;
   font-size: 1rem;
 }
 
-#main {
-  padding: 60px 25px;
+@media screen and (max-width: 400px) {
+  .lst-gnb li .img {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-transform-origin: 0 50%;
+            transform-origin: 0 50%;
+  }
+  .lst-gnb a {
+    padding: 0 15px;
+    font-size: 1.125rem;
+  }
 }
 
-.tit-main {
+#main {
+  padding: 60px 5%;
+}
+
+.area-tit {
   position: relative;
-  display: block;
   margin-bottom: 20px;
   padding-bottom: 30px;
-  font-size: 42px;
-  font-weight: 700;
-  color: #262626;
-  line-height: 1.31;
-  letter-spacing: -0.13rem;
 }
 
-.tit-main span {
-  display: block;
-  color: #00a8bb;
-}
-
-.tit-main .link-more {
+.area-tit .link-more {
   position: absolute;
   bottom: 0;
   right: 0;
-  font-size: 16px;
-  font-weight: 400;
+  font-weight: 700;
   text-align: right;
   color: #6e6e6e;
 }
 
-.tit-main .link-more::after {
+.area-tit .link-more::after {
   content: "\f061";
   font-family: "Line Awesome Free";
   font-weight: 900;
@@ -466,6 +537,20 @@ legend {
   margin-left: 7px;
   vertical-align: middle;
   font-size: 1.5rem;
+}
+
+.tit-main {
+  display: block;
+  font-size: 2.625rem;
+  font-weight: 800;
+  color: #262626;
+  line-height: 1.31;
+  letter-spacing: -0.16rem;
+}
+
+.tit-main span {
+  display: block;
+  color: #00a8bb;
 }
 
 .sec-knowhow {
@@ -481,14 +566,15 @@ legend {
   width: 100%;
   height: 71px;
   margin: 0 0 15px;
-  padding: 0 20px;
+  padding: 0 5%;
   border-radius: 18px;
   -webkit-box-shadow: 3.5px 6.1px 9.8px 0.2px rgba(0, 0, 0, 0.1);
           box-shadow: 3.5px 6.1px 9.8px 0.2px rgba(0, 0, 0, 0.1);
   border: solid 2px #00aec2;
   background-color: #fff;
-  font-size: 20px;
-  line-height: 71px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 66px;
   letter-spacing: -0.8px;
   text-align: left;
   color: #00a2b4;
@@ -506,6 +592,9 @@ legend {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   padding: 20px 0;
 }
@@ -533,7 +622,8 @@ legend {
 .lst-knowhow .area-info .info-type1 {
   background-color: #00a8bb;
   color: #fff;
-  font-size: 14.5px;
+  font-size: 0.906em;
+  font-weight: 800;
 }
 
 .lst-knowhow .area-info .info-type1::before {
@@ -541,12 +631,17 @@ legend {
   display: block;
   width: 21px;
   height: 17px;
-  margin: 16px auto 3px;
+  margin: 16px auto 5px;
   background: url(../../images/ico-book@2x.png) 0 0/contain no-repeat;
+}
+
+.lst-knowhow .area-info .info-type2 {
+  font-weight: 700;
 }
 
 .lst-knowhow .area-info .info-type2 span {
   font-size: 23px;
+  font-weight: 800;
 }
 
 .lst-knowhow .area-info .info-type2::before {
@@ -568,19 +663,18 @@ legend {
   width: 100%;
 }
 
-.lst-knowhow .area-txt2 {
-  padding-top: 15px;
-}
-
 .lst-knowhow .area-txt2 .tit {
   display: block;
-  font-size: 19px;
+  font-size: 1.188rem;
+  font-weight: 700;
   color: #262626;
+  line-height: 1.3;
 }
 
 .lst-knowhow .area-txt2 .write {
   display: block;
-  font-size: 14px;
+  margin-top: 5px;
+  font-size: 0.875em;
   color: #797979;
 }
 
@@ -602,20 +696,22 @@ legend {
 }
 
 .lst-knowhow .fst .area-txt {
-  padding: 27px 24px 22px;
+  width: 100%;
+  padding: 27px 7% 22px;
 }
 
 .lst-knowhow .fst .area-txt .tit {
-  font-size: 30px;
+  font-size: 1.875rem;
+  font-weight: 700;
   color: #000;
   line-height: 1.4;
   letter-spacing: -0.1rem;
+  line-height: 1.3;
 }
 
 .lst-knowhow .fst .area-txt .txt {
   display: block;
   margin-top: 12px;
-  font-size: 16px;
   color: #666;
 }
 
@@ -624,16 +720,17 @@ legend {
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid #d3d3d3;
-  font-size: 19px;
+  font-size: 1.188rem;
+  font-weight: 700;
   color: #262626;
 }
 
 .sec-good {
-  margin: 91px 0;
+  margin: 91px 0 50px;
 }
 
 .sec-good .lst-good {
-  margin-top: -30px;
+  margin-top: 25px;
 }
 
 .sec-good .lst-good li {
@@ -643,9 +740,8 @@ legend {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 110px;
   margin-bottom: 15px;
-  padding: 0 20px;
+  padding: 13px 5% 15px;
   border-radius: 18px;
   background-color: #f6f6f6;
   letter-spacing: -0.07rem;
@@ -664,13 +760,17 @@ legend {
 
 .sec-good .lst-good .txt {
   margin-top: 5px;
-  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 700;
   color: #868686;
+  line-height: 1.3;
 }
 
 .sec-good .lst-good .txt strong {
   display: block;
-  font-size: 21px;
+  margin-top: 5px;
+  font-size: 1.313em;
+  font-weight: 700;
   color: #262626;
 }
 
