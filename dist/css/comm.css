@@ -136,6 +136,7 @@ button {
   textarea,
   button {
     font-size: 14px;
+    letter-spacing: -0.08em;
   }
 }
 
