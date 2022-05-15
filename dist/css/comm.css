@@ -266,7 +266,7 @@ legend {
   display: none !important;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 400px) {
   .pc {
     display: none !important;
   }
@@ -697,7 +697,7 @@ legend {
 .lst-knowhow .area-txt2 .write {
   display: block;
   margin-top: 5px;
-  font-size: 0.875em;
+  font-size: 14px;
   color: #797979;
 }
 
@@ -735,6 +735,7 @@ legend {
 .lst-knowhow .fst .area-txt .txt {
   display: block;
   margin-top: 12px;
+  font-size: 16px;
   color: #666;
 }
 
